@@ -1,10 +1,10 @@
-# 🛡️ PhishGuard
+# P-Guard
 
-**PhishGuard** is a modular, automated phishing detection and alerting tool designed for SOC analysts, blue teamers, and cybersecurity professionals. It integrates with Gmail, enriches IOCs using VirusTotal and AbuseIPDB, scores threat levels, applies Gmail labels, and sends real-time alerts to Slack.
+**P-Guard** is a modular, automated phishing detection and alerting tool designed for SOC analysts, blue teamers, and cybersecurity professionals. It integrates with Gmail, enriches IOCs using VirusTotal and AbuseIPDB, scores threat levels, applies Gmail labels, and sends real-time alerts to Slack.
 
 ---
 
-## 🚀 Features
+## Features
 
 - ✅ Gmail API integration with OAuth2
 - ✅ IOC extraction (URLs, IPs, Domains) from emails
@@ -12,22 +12,22 @@
 - ✅ Risk scoring engine (low, suspicious, phishing)
 - ✅ Gmail labeling for flagged messages
 - ✅ Slack alert integration via webhook
-- 🪵 Rotating log files via `logger.py` (stored in `/logs`)
-- 🔐 `.env`-based API key management
-- 📦 Modular architecture for easy expansion
+- Rotating log files via `logger.py` (stored in `/logs`)
+- `.env`-based API key management
+- Modular architecture for easy expansion
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
-phishguard/
+p-guard/
 ├── phishguard.py            # Entry point script
 ├── credentials-gmail.json   # OAuth credentials (NOT committed)
 ├── .env                     # API keys and secrets (NOT committed)
 ├── .env.example             # Template for required env variables
 ├── requirements.txt         # Dependencies
-│
+├── README.md                # This file
 ├── gmail_reader.py          # Gmail API integration
 ├── ioc_extractor.py         # IOC parsing from email bodies
 ├── osint_lookup.py          # Threat enrichment via VirusTotal/AbuseIPDB
@@ -39,13 +39,12 @@ phishguard/
 │   └── logger.py            # Logging via rotating log files
 │
 └── docs/
-    ├── README.md            # This file
     └── instructions.md      # Internal developer guide
 ```
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - Python 3.11+
 - Gmail API credentials
@@ -69,7 +68,7 @@ A safe public template is included as `.env.example`.
 
 ---
 
-## 🧪 Usage
+## Usage
 
 ```bash
 python3 phishguard.py
@@ -84,7 +83,7 @@ The tool will:
 
 ---
 
-## 🪵 Logging
+## Logging
 
 PhishGuard uses a rotating file logger to persist detections, errors, and risk assessments to disk.
 
@@ -96,7 +95,7 @@ This makes the tool production-ready for SOC use cases and long-term triage or i
 
 ---
 
-## 📷 Example Output (Console)
+## Example Output (Console)
 
 ```
 📨 From: alerts@paypal-login-check.com
@@ -120,7 +119,7 @@ Subject: Urgent Action Required
 
 ---
 
-## 🧱 Architecture
+## Architecture
 
 Each component is separated by role and fully modular:
 - Easy to extend with new enrichment providers
@@ -129,7 +128,7 @@ Each component is separated by role and fully modular:
 
 ---
 
-## 🛡️ Security Notes
+## Security Notes
 
 - All secrets and keys are environment-based
 - No secrets are ever committed to the repo
@@ -138,7 +137,7 @@ Each component is separated by role and fully modular:
 
 ---
 
-## 📌 Roadmap
+## Roadmap
 
 - [ ] HTML report export
 - [ ] CLI options for dry run / phishing-only
@@ -148,24 +147,14 @@ Each component is separated by role and fully modular:
 
 ---
 
-## 🤝 Contributing
+---
 
-Pull requests are welcome!
+## Credits
 
-If you'd like to contribute:
-- Fork the repo
-- Create a feature branch
-- Submit a clean pull request
-- Please follow the modular structure and secure coding practices outlined in `docs/instructions.md`
+Created by Amritangshu for building a SOC analyst portfolio.
 
 ---
 
-## 🧠 Credits
-
-Created by a security automation enthusiast building a SOC analyst portfolio.
-
----
-
-## 📄 License
+## License
 
 MIT License (feel free to use/extend responsibly)
